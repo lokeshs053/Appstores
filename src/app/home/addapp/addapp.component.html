@@ -1,0 +1,39 @@
+
+<form class="example-form" [formGroup]="addForm" >
+  
+  <div>
+
+      <mat-form-field>
+          <input matInput placeholder="AppName" formControlName="appName">
+        </mat-form-field>
+      
+  </div>
+  <div>
+
+      <mat-form-field>
+          <input matInput placeholder="AppType" formControlName="appType">
+        </mat-form-field>
+      
+  </div>
+  <div>
+
+      <mat-form-field>
+          <textarea matInput placeholder="Description" formControlName="description"></textarea>
+        </mat-form-field>
+      
+  </div>
+  <div>
+
+      <mat-form-field>
+          <input  type="date" matInput placeholder="uploadDate" formControlName="uploadDate">
+        </mat-form-field>
+      
+  </div>
+
+
+  <div class="button-row">
+      <button mat-raised-button type="submit" color="accent" [disabled]="!addForm.valid" (click)="add()"> Add</button>
+      <button mat-raised-button type="reset"  color="warn"  >Cancel</button>
+      </div>
+
+</form>
